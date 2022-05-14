@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Fee</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.duration}}</td>
+            <td>{{this.fee}}</td>
+            <td><a href="/course/{{this._id}}" data-id="{{this._id}}" id="deleteButton">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script src="/static/js/common.js"></script>
